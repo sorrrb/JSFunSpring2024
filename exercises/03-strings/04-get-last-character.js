@@ -9,3 +9,5 @@ let str = "Wes Craven"; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+
+const lastCharacter = str.at(-1);

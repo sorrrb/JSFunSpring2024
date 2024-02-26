@@ -16,3 +16,4 @@ let newLastName = "Fernandez"; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+fullName = fullName.substring(0, fullName.indexOf(' ') + 1) + newLastName;
