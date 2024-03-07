@@ -10,3 +10,4 @@
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+const countNumberOfDigits = int => int.toString().length;
