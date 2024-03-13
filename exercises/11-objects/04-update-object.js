@@ -15,3 +15,5 @@ let student = {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+student.name = 'Chris Druke';
+student.skills.push('Very funny guy');
