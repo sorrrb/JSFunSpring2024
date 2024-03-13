@@ -13,4 +13,4 @@ const myDog = {
   breed: "Pitbull",
   age: 6,
   owners: ["Matina", "Jamal"]
-}
+};
