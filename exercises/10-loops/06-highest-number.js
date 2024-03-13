@@ -7,3 +7,7 @@ let numbers = [10000, -8, 10, 0.7]; // e.g.
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let highest = numbers[0];
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > highest) highest = numbers[i];
+}
