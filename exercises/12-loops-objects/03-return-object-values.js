@@ -18,3 +18,7 @@ const blogPost = {
  */
 
 // WRITE YOUR ANSWER BELOW THIS LINE
+let values = [];
+for (let keys in blogPost) {
+  values.push(blogPost[keys]);
+}
