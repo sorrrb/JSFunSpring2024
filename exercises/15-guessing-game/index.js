@@ -1,4 +1,5 @@
-import { prompt, question, questionInt } from "readline-sync";
+import { questionInt } from "readline-sync";
+
 let maxNumber;
 let minNumber = 0;
 
@@ -22,7 +23,8 @@ function setupGame() { // Main function to determine secret number and game setu
       maxNumber = 101;
       break;
     default:
-      console.log("ERROR");
+      console.log("ERROR: user input invalid - setting difficulty to default (Easy)");
+      maxNumber = 6;
       break;
   }
 
@@ -31,7 +33,8 @@ function setupGame() { // Main function to determine secret number and game setu
 }
 
 function setDifficulty() { // Helper function to set game difficulty
-  let output = questionInt("Please enter a number 1-5 to select a difficulty:\n", { limit: [1, 2, 3, 4, 5] });
+  let availableDifficulties = [1, 2, 3, 4, 5];
+  let output = questionInt("Please enter a number 1-5 to select a difficulty:\n", { limit: availableDifficulties });
   return output;
 }
 
@@ -63,13 +66,18 @@ function startGame(secretNumber) { // Main function to run game loop
 }
 
 function guessNumber() { // Helper function to handle user guessing
-  let input = questionInt(`\nWhat do you think the number is? (${minNumber}-${maxNumber - 1})\n`, {
+  let userInput = questionInt(`\nWhat do you think the number is? (${minNumber}-${maxNumber - 1})\n`, {
     limit: function (input) {
-      return input >= minNumber && input <= (maxNumber - 1);
+      return checkRange(minNumber, maxNumber, input);
     },
     limitMessage: `Sorry, please enter a valid number between ${minNumber} and ${maxNumber - 1}`
   });
-  return input;
+  return userInput;
+}
+
+function checkRange(min, max, input) {
+  console.log(input);
+  return (input >= min && input <= max);
 }
 
 const SECRET_NUM = setupGame(); // Function invocation to setup game and assign secret number to constant
