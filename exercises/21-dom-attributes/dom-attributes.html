@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <img
-      src="https://files.worldwildlife.org/wwfcmsprod/images/Panda_in_Tree/hero_full/2wgwt9z093_Large_WW170579.jpg"
-    />
-    <script>
-      (function () {
-        /**
-         * Question 1: Use console.log to log the image url (the src)
-         * Question 2: Change the image (the src)
-         * Question 3: Add an alt attribute to the image
-         *
-         * Write your answers to each question below
-         */
-      })();
-    </script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <img src="https://files.worldwildlife.org/wwfcmsprod/images/Panda_in_Tree/hero_full/2wgwt9z093_Large_WW170579.jpg" />
+  <script>
+    (function () {
+      /**
+       * Question 1: Use console.log to log the image url (the src)
+       * Question 2: Change the image (the src)
+       * Question 3: Add an alt attribute to the image
+       *
+       * Write your answers to each question below
+       */
+      const newImg = document.querySelector('img');
+      console.log(newImg);
+      newImg.src = 'https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg';
+      newImg.alt = 'Mesmerizing picture of a tree distorted with an inverted fish-eye perspective';
+    })();
+  </script>
+</body>
+
 </html>

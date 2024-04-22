@@ -12,4 +12,21 @@
  */
 (function () {
   // Put your answers in here
+  const firstListEle = document.querySelector('li');
+  console.log(firstListEle);
+
+  const myIdEle = document.querySelector('#myId');
+  console.log(myIdEle);
+
+  const yellowListEles = document.querySelectorAll('li.bg-warning');
+  console.log(yellowListEles);
+
+  const targetBtn = document.querySelector('button#targetBtn'); // HTML modified
+  console.log(targetBtn);
+
+  const socialLinks = document.querySelectorAll('a.social'); // HTML modified
+  console.log(socialLinks);
+
+  const nestedElements = document.querySelectorAll('div#myRow div.col');
+  console.log(nestedElements);
 })();
